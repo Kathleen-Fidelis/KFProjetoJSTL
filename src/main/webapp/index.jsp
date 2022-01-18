@@ -43,27 +43,30 @@
 						  
 	
 	<%--PARTE 1--%>
-	<c:set var="numero" value="20"/>
-	<c:set var="resultado" value="${numero = numero - 1}"></c:set>
-	
-	
-	
-	<h1>Tendo número inicial de: <c:out value="${numero}"/></h1>
-	
-	<h1><c:out value="${numero}"/> <c:choose>
-							<c:when test="${numero >= 1}">
-								<c:out value="${resultado}"/>
-							</c:when>
-							<c:otherwise>
-								<c:out value="Fim do programa"/>
-							</c:otherwise>
-						  </c:choose></h1>
-						  
-	<c:if test="${numero != 20}">
-		<c:out value="Fim do programa"/>
-	</c:if>	
-	
-	<%--<c:redirect url = "pagina.jsp"/>--%>			 
-				
+	<div class="container mt-5" style="color:primary;">
+		<c:set var="numero" value="20"/>
+		<c:set var="resultado" value="${numero = numero - 1}"></c:set>
+		
+		
+		
+		<h1>Tendo número inicial de: <c:out value="${numero}"/></h1>
+		
+		<h1><c:out value="${numero}"/> <c:choose>
+								<c:when test="${numero >= 1}">
+									<c:out value="${resultado}"/>
+								</c:when>
+								<c:otherwise>
+									<c:out value="Fim do programa"/>
+								</c:otherwise>
+							  </c:choose></h1>
+							  
+		<c:if test="${numero != 20}">
+			<c:out value="Fim do programa"/>
+		</c:if>	
+		
+		<%--<c:redirect url = "pagina.jsp"/>--%>	
+		
+		<button type="button" class="btn btn-primary">Salvar</button> 
+	</div>		
 </body>
 </html>
