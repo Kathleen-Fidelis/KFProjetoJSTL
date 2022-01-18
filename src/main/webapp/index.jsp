@@ -11,6 +11,8 @@
 <title>Insert title here</title>
 </head>
 <body>
+
+	<%--EXEMPLO--%>
 	<%!
 	String today(){
 		java.text.SimpleDateFormat dt = new SimpleDateFormat("yyyy-mm-dd hh:mm:ss");
@@ -35,5 +37,33 @@
 								<c:out value="${d1}"/>
 							</c:otherwise>
 						  </c:choose></h1>
+						  
+	
+						
+						  
+	
+	<%--PARTE 1--%>
+	<c:set var="numero" value="20"/>
+	<c:set var="resultado" value="${numero = numero - 1}"></c:set>
+	
+	
+	
+	<h1>Tendo número inicial de: <c:out value="${numero}"/></h1>
+	
+	<h1><c:out value="${numero}"/> <c:choose>
+							<c:when test="${numero >= 1}">
+								<c:out value="${resultado}"/>
+							</c:when>
+							<c:otherwise>
+								<c:out value="Fim do programa"/>
+							</c:otherwise>
+						  </c:choose></h1>
+						  
+	<c:if test="${numero != 20}">
+		<c:out value="Fim do programa"/>
+	</c:if>	
+	
+	<%--<c:redirect url = "pagina.jsp"/>--%>			 
+				
 </body>
 </html>
